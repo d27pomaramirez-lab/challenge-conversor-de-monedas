@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Conversor {
     private ApiService ApiServicio = new ApiService();
-
+    private Historial historial = new Historial();
 
     private double calcularConversion(double cantidad, double tasa) {
         return cantidad * tasa;
@@ -76,7 +76,7 @@ public class Conversor {
                     if (cantidad <= 0) {
                         System.out.println(" El monto a convertir debe ser mayor a cero. Intente de nuevo.\n");
                     } else {
-                        cantidadValida = true; // Salimos del bucle solo si es válido y > 0
+                        cantidadValida = true;
                     }
                 } catch (InputMismatchException e) {
                     System.out.println("Formato de número inválido. Use números y comas/puntos decimales según su configuración regional.");
@@ -90,7 +90,7 @@ public class Conversor {
 
                 System.out.printf("El valor %.2f [%s] corresponde al valor final de => %.2f [%s]\n\n",
                         cantidad, monedaBase, resultado, monedaDestino);
-
+                historial.guardarConversion(cantidad,monedaBase,resultado,monedaDestino);
             }catch(Exception e){
                 System.out.println("Ocurrió un error: " + e.getMessage());
             }
