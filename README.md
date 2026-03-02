@@ -24,8 +24,8 @@ El proyecto prioriza la alta cohesión y la separación de responsabilidades (Se
 
 ## 🚀 Tecnologías Utilizadas
 
-* **Lenguaje:** Java (JDK 11 o superior)
-* **Librerías externas:** [Gson](https://github.com/google/gson) (para manipulación de JSON)
+* **Lenguaje:** Java (JDK 17 o superior)
+* **Librerías externas:** [Gson](https://github.com/google/gson) (para manipulación de JSON, última versión actual)
 * **API:** ExchangeRate-API
 
 ## ⚙️ Configuración y Ejecución
