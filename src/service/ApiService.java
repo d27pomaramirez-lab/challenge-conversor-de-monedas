@@ -9,7 +9,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class ApiService {
-    private static final String API_KEY = "2d25552d6b1fac7d6da6745d";
+    private static final String API_KEY = "";
     private static final String URL_BASE = "https://v6.exchangerate-api.com/v6/";
 
     public double obtenerTasaDeCambio(String monedaBase, String monedaDestino) {
